@@ -144,7 +144,7 @@ if category=="2":
         file_crush = open(file_3,'r')
         for word in file_crush:
             key_wrd = word.encode('utf-8')
-            roast = hashlib.sha384(key_wrd.split()).hexdigest()
+            roast = hashlib.sha384(key_wrd.strip()).hexdigest()
         if roast == usr_3:
             print("\033[92m[+]\033[mpassword found")
             print("\033[92m[+]\033[mpassword is " + word)
